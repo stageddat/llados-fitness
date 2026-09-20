@@ -2,4 +2,5 @@
     <string name="app_name">Llados Fitness</string>
     <string name="app_title">Llados Fitness Pro+</string>
     <string name="app_description">El éxito no se espera, se fabrica.</string>
+    <string name="name">Nombre</string>
 </resources>
