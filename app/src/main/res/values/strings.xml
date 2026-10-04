@@ -3,4 +3,14 @@
     <string name="app_title">Llados Fitness Pro+</string>
     <string name="app_description">El éxito no se espera, se fabrica.</string>
     <string name="name">Nombre</string>
+    <string name="t_name_input_hint">Amadeo Lladós Sánchez-Toscano</string>
+    <string name="tv_age_title">Edad</string>
+    <string name="n_age_input_hint">20</string>
+    <string name="global_minus">-</string>
+    <string name="global_plus">+</string>
+    <string name="global_kg">kg</string>
+    <string name="tv_weight_title">Peso</string>
+    <string name="tv_weight_value">70</string>
+    <string name="tv_weight_min">0 kg</string>
+    <string name="tv_weight_max">150 kg</string>
 </resources>

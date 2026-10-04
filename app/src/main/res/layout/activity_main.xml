@@ -60,11 +60,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/t_name_input"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:autofillHints=""
                 android:ems="10"
-                android:hint="Amadeo Lladós Sánchez-Toscano"
+                android:hint="@string/t_name_input_hint"
                 android:inputType="text"
                 android:minHeight="48dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -98,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alfa_slab_one"
-                android:text="Edad"
+                android:text="@string/tv_age_title"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -108,13 +109,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:autofillHints=""
                 android:ems="10"
                 android:enabled="false"
                 android:focusable="false"
-                android:hint="20"
+                android:hint="@string/n_age_input_hint"
                 android:inputType="number"
                 android:minHeight="48dp"
-                android:text="20"
                 app:layout_constraintEnd_toStartOf="@+id/btn_age_minus"
                 app:layout_constraintStart_toStartOf="@+id/tv_age_title"
                 app:layout_constraintTop_toBottomOf="@+id/tv_age_title" />
@@ -131,7 +132,7 @@
                 android:minWidth="0dp"
                 android:minHeight="0dp"
                 android:padding="0dp"
-                android:text="-"
+                android:text="@string/global_minus"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@+id/n_age_input"
                 app:layout_constraintEnd_toStartOf="@+id/btn_age_plus"
@@ -149,7 +150,7 @@
                 android:minWidth="0dp"
                 android:minHeight="0dp"
                 android:padding="0dp"
-                android:text="+"
+                android:text="@string/global_plus"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="@+id/btn_age_minus"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -174,63 +175,66 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/tv_weight_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/alfa_slab_one"
-                android:text="Peso"
+                android:text="@string/tv_weight_title"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/tv_weight_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:text="@string/tv_weight_value"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_weight_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_weight_title" />
+
+            <TextView
+                android:id="@+id/tv_weight_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/global_kg"
+                android:textSize="16sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tv_weight_value"
+                app:layout_constraintStart_toEndOf="@+id/tv_weight_value" />
+
             <SeekBar
-                android:id="@+id/seekBar2"
+                android:id="@+id/sb_weight_input"
                 style="@style/Widget.AppCompat.SeekBar.Discrete"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:max="100"
-                android:progress="3"
+                android:max="150"
+                android:minHeight="48dp"
+                android:progress="70"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                app:layout_constraintStart_toStartOf="@+id/tv_weight_value"
+                app:layout_constraintTop_toBottomOf="@+id/tv_weight_value" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tv_weight_min"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="TextView"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="cm"
-                app:layout_constraintBottom_toBottomOf="@+id/textView2"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
-                app:layout_constraintTop_toTopOf="@+id/textView2" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/tv_weight_min"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/seekBar2"
-                app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+                app:layout_constraintStart_toStartOf="@+id/sb_weight_input"
+                app:layout_constraintTop_toBottomOf="@+id/sb_weight_input" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tv_weight_max"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="@string/tv_weight_max"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/seekBar2"
-                app:layout_constraintTop_toBottomOf="@+id/seekBar2" />
+                app:layout_constraintEnd_toEndOf="@+id/sb_weight_input"
+                app:layout_constraintTop_toBottomOf="@+id/sb_weight_input" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
